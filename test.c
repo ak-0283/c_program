@@ -1,14 +1,12 @@
 #include<stdio.h>
-void main()
+
+int main()
 {
-    int i=0,j;
-    printf("Enter the range: ");
-    scanf("%d",&j);
-    while (i<=j)
-    {
-        if(i%3==0 && i%5==0)
-        printf("\n %d",i);
-        i++;
-    }
+    int a,b,c;
+    printf("Enter the 1st number: ");
+    scanf("%d",&a);
+    printf("Enter the 2nd number: ");
+    scanf("%d",&b);
+    
     return 0;
 }
