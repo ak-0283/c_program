@@ -1,4 +1,6 @@
-# abhay-demo
+# ABHAY-DEMO
 This is my first repository.
 <br>
-My name is Abhay Kumar(Nerim)
+My name is Abhay Kumar.
+<br>
+I am a bca student
