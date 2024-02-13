@@ -4,7 +4,7 @@
 int main()
 {   
     int arr[100],s,c,number;
-    printf("enter the no. of elements in array: ");
+    printf("enter the size of array: ");
     scanf("%d",&number);
     printf("enter %d number: ",number);
     for ( c = 0; c < number; c++)
@@ -16,7 +16,7 @@ int main()
     for(c=0;c<number;c++)
     if(arr[c]==s)
     {
-        printf("%d is present at location %d",s,c=c+1);
+        printf("%d is present at array index postion %d",s,c);
         break;
     }
     else if(c==number)
