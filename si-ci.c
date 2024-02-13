@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<math.h>
 main()
 {
     float p,r,t,a,si,ci;
@@ -12,5 +13,5 @@ main()
     printf("Simple interest = %f",si);
     a=p*(pow((1+r/100),t));
     ci=a-p;
-    printf("\n Compound interest = %f",c);
+    printf("\n Compound interest = %f",ci);
 }
