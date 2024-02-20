@@ -1,4 +1,4 @@
-//using passing and array as a argument using function
+//passing and  as a argument using function
 //find add of two number
 #include<stdio.h>
 #include<conio.h>
