@@ -19,7 +19,7 @@ int main()
         printf("%d \n",a[i]);
     
  }
- printf("enter the elements which is going to search: ");
+ printf("enter the search element: ");
  scanf("%d",&s);
  for (int i = 0; i < n; i++)
  {

@@ -19,6 +19,7 @@ int main()
  beg=0;
  end=n-1;
  mid=(beg+end)/2;
+
  while(beg<=end)
  {
     if(a[mid]==s)
@@ -35,9 +36,10 @@ int main()
         end=mid-1;
     }
  }
- if(beg>end)
+
+ while(beg>end)
  {
-    printf("not found %d is not present in the list",s);
+    printf("the search element is not present");
  }
  return 0;
 }
