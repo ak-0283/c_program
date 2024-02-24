@@ -37,7 +37,7 @@ int main()
     }
  }
 
- while(beg>end)
+ if(beg>end)
  {
     printf("the search element is not present");
  }
