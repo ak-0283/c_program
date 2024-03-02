@@ -1,4 +1,4 @@
-//binary search without using function
+//binary search without function
 
 #include<stdio.h>
 #include<conio.h>
@@ -12,22 +12,21 @@ int main()
  printf("enter array elements: ");
  for ( i = 0; i < n; i++)
  {
-    scanf("%d",&a[i]);
+scanf("%d",&a[i]);
  }
  printf("enter the search elements: ");
  scanf("%d",&s);
  beg=0;
  end=n-1;
- mid=(beg+end)/2;
-
  while(beg<=end)
  {
+   mid=(beg+end)/2;
     if(a[mid]==s)
     {
     printf("%d found at location %d\n",s,mid);
     break;
     }
-    else if(a[mid<s])
+    else if(a[mid]<s)
     {
         beg=mid+1;
     }
