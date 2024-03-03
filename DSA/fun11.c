@@ -25,7 +25,8 @@ int main() {
             if (arr[i] <= arr[j]) 
             {
                 i++;
-            } else 
+            } 
+            else 
             {
                 temp = arr[j];
                 for (int k = j; k > i; k--) 
