@@ -1,4 +1,2 @@
-# ABHAY-DEMO 
-This is c repository.
-<br>
-# My name is Abhay Kumar
+<h1>This is c repository.</h1>
+
