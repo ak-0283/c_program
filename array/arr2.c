@@ -1,7 +1,8 @@
 //input some no and find the sum of the given numbers
+
 #include<stdio.h>
 int main(){
-    int a[50],i,count,sum=0,n;
+    int a[50],i,sum=0,n;
     printf("enter the size of array elements: ");
     scanf("%d",&n);
     printf("enter the arrary elements: ");
