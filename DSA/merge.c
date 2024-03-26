@@ -7,7 +7,7 @@
 int main() {
     int n, i, j, temp, mid, low = 0,arr[50];
 
-    printf("Enter the number of elements: ");
+    printf("Enter the size of an array: ");
     scanf("%d", &n);
 
     printf("Enter the elements:\n");
@@ -47,6 +47,5 @@ int main() {
         printf("%d ", arr[i]);
     }
     printf("\n");
-
-    return 0;
+   return 0;
 }
