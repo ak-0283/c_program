@@ -3,49 +3,69 @@
 #include <stdio.h>
 #include<conio.h>
 #include<math.h>
+#define size 100
 
-int main() {
-    int n, i, j, temp, mid, low = 0,arr[50];
-
-    printf("Enter the size of an array: ");
+void main()
+{
+    int arr[size], i, n;
+    printf("enter the no. of elements: ");
     scanf("%d", &n);
-
-    printf("Enter the elements:\n");
-    for (i = 0; i < n; i++) 
+    printf("enter the elements: ");
+    for (i = 0; i < n; i++)
     {
         scanf("%d", &arr[i]);
     }
 
-    while (low < n) 
+    int beg = 0, end = n - 1;
+    int mid,j,temp[size],index,k;
+    while (beg < end)
     {
-        mid = (low + n) / 2;
-
-        for (i = low, j = mid + 1; i <= mid && j < n; ) 
+        mid = (beg + end) / 2;
+        int i = beg;
+        j = mid + 1;
+        index = beg;
+        while ((i <= mid) && (j <= end))
         {
-            if (arr[i] <= arr[j]) 
+            if (arr[i] < arr[j])
             {
+                temp[index] = arr[i];
                 i++;
-            } 
-            else 
+            }
+            else
             {
-                temp = arr[j];
-                for (int k = j; k > i; k--) 
-                {
-                    arr[k] = arr[k - 1];
-                }
-                arr[i] = temp;
-                i++;
+                temp[index] = arr[j];
                 j++;
-                mid++;
+            }
+            index++;
+        }
+        if (i > mid)
+        {
+            while (j <= end)
+            {
+                temp[index] = arr[j];
+                j++;
+                index++;
             }
         }
-        low = n;
+        else
+        {
+            while (i <= mid)
+            {
+                temp[index] = arr[i];
+                i++;
+                index++;
+            }
+        }
+        for (k = beg; k < index; k++)
+        {
+            arr[k] = temp[k];
+        }
     }
 
-    printf("Sorted array:\n");
-    for (i = 0; i < n; i++) {
+
+    printf("the sorted array is: ");
+    for (i = 0; i < n; i++)
+    {
         printf("%d ", arr[i]);
     }
-    printf("\n");
-   return 0;
 }
