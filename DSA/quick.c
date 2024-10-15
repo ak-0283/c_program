@@ -5,34 +5,34 @@
 #include<math.h>
 int main()
 {
- int left,beg,right,end,loc,flag=0,a[50],i,n;
+ int a[100],
+ beg,end,loc;
+ int left=beg,right=end,loc=beg,flag=0;
+ int i,n;
  printf("enter the size of array: ");
  scanf("%d",&n);
  printf("enter the elements: ");
- for(i=0;i<n;i++)
+ for ( i = 0; i < n; i++)
  {
-    scanf("%d",&a[i]);
+   scanf("%d",&a[i]);
  }
- 
- left=beg;
- right=end;
- loc=beg;
- while (a[loc]<=a[right] && loc!=right)      
+ while (a[loc]<=a[right] && loc!=right)
  {
-   right=right-1;
+  right=right-1; 
  }
+
  if(loc=right)
  {
    flag=1;
  }
-else if(a[loc]>a[right])
-{
+ else if(a[loc]>a[right])
+ {
    a[loc]=a[right];
    loc=right;
-}
-if(flag=0)
-{
-   while (a[loc]>=a[left] && loc!=left)
+ }
+ if(flag=0)
+ {
+   while (a[loc]>=a[right] && loc != left)
    {
       left=left+1;
    }
@@ -40,17 +40,18 @@ if(flag=0)
    {
       flag=1;
    }
-   else if(a[loc]<a[right])
+   else if(a[loc]<a[left])
    {
       a[loc]=a[left];
+      loc=left;
    }
-}
+ }
 
- printf("sorted array: ");
- for(i=0;i<n;i++)
+ printf("the sorted array is: ");
+ for ( i = 0; i < n; i++)
  {
    printf("%d",a[i]);
  }
-
+ 
  return 0;
 }
